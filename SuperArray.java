@@ -19,4 +19,22 @@ public class SuperArray{
     return true;
   }
 
+  public String get(int index){
+    return data[index];
+  }
+
+  public String set(int index, String element){
+    String temp = data[index];
+    data[index] = element;
+    return temp;
+  }
+
+  private void resize(){
+    String [] temp = data;
+    data = new String[size+1];
+    for(int i = 0; i < size ; i++){
+      data[i] = temp[i];
+    }
+  }
+
 }
