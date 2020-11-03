@@ -1,8 +1,9 @@
 public class SuperArray{
-  private String [] data;
+  private String[] data;
   private int size;
 
   public SuperArray(){
+    data = new String[0];
   }
 
   public int size(){
@@ -11,7 +12,7 @@ public class SuperArray{
   }
 
   public boolean add(String element){
-    String [] temp = data;
+    String[] temp = data;
     data = new String[size+1];
     for(int i = 0; i < size ; i++){
       data[i] = temp[i];
@@ -31,7 +32,7 @@ public class SuperArray{
   }
 
   private void resize(){
-    String [] temp = data;
+    String[] temp = data;
     data = new String[size+1];
     for(int i = 0; i < size ; i++){
       data[i] = temp[i];
