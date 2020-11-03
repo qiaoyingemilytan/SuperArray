@@ -9,4 +9,14 @@ public class SuperArray{
     return size;
   }
 
+  public boolean add(String element){
+    String [] temp = data;
+    data = new String[size+1];
+    for(int i = 0; i < size ; i++){
+      data[i] = temp[i];
+    }
+    data[size] = element;
+    return true;
+  }
+
 }
