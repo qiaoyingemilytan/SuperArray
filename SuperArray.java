@@ -36,10 +36,42 @@ public class SuperArray{
 
   private void resize(){
     String[] temp = data;
-    data = new String[size+1];
+    data = new String[size()+1];
     for(int i = 0; i < size ; i++){
       data[i] = temp[i];
     }
+  }
+
+  public boolean isEmpty(){
+    return size() == 0;
+  }
+
+  public void clear(){
+    data = new String[0];
+  }
+
+  public String toString(){
+    String newString = "[";
+    for(int i = 0; i < size()-1; i++){
+      if(data[i] != null){
+        newString += data[i];
+        newString += ", ";
+      }
+    }
+    if(data[size-1] != null){
+      newString += data[size-1];
+    }
+    newString += "]";
+    return newString;
+  }
+
+  public boolean contains(String s){
+    for(int i = 0; i < size(); i++){
+      if(data[i].equals(s)){
+        return true;
+      }
+    }
+    return false;
   }
 
 }
