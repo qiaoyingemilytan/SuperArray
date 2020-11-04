@@ -12,11 +12,11 @@ public class SuperArray{
   }
 
   public boolean add(String element){
-    String[] temp = new String [size];
+    String[] temp = new String [size()];
     for(int i = 0; i < size; i++){
       temp[i]=data[i];
     }
-    data = new String[size+1];
+    data = new String[size()+1];
     for(int i = 0; i < size ; i++){
       data[i] = temp[i];
     }
