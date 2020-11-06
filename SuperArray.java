@@ -80,5 +80,15 @@ public class SuperArray{
     return false;
   }
 
+  public void add(int index, String element){
+    resize();
+    String temp = data[index];
+    set(index, element);
+    for(int i = index+1; i < size(); i++){
+      String temp2 = data[i];
+      data[i] = temp;
+      temp = temp2;
+    }
+  }
 
 }
