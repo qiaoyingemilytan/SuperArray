@@ -58,14 +58,16 @@ public class SuperArray{
 
   public String toString(){
     String newString = "[";
-    for(int i = 0; i < size()-1; i++){
-      if(data[i] != null){
-        newString += data[i];
-        newString += ", ";
+    if(size() != 0){
+      for(int i = 0; i < size()-1; i++){
+        if(data[i] != null){
+          newString += data[i];
+          newString += ", ";
+        }
       }
-    }
-    if(data[size-1] != null){
-      newString += data[size-1];
+      if(data[size-1] != null){
+        newString += data[size-1];
+      }
     }
     newString += "]";
     return newString;
@@ -92,11 +94,15 @@ public class SuperArray{
   }
 
   public String remove(int index){
+    String[] arr = new String [size()-1];
     String removed = data[index];
     for(int i = index; i < size()-1; i++){
       set(i, data[i+1]);
     }
-    set(size()-1, null);
+    for(int i = 0; i < size()-1; i++){
+      arr[i] = data[i];
+    }
+    data = arr;
     return removed;
   }
 
@@ -108,6 +114,14 @@ public class SuperArray{
       }
     }
     return index;
+  }
+
+  public String[] toArray(){
+    String[] newArray = new String [size()];
+    for(int i = 0; i < size(); i++){
+      newArray[i] = data[i];
+    }
+    return newArray;
   }
 
 }
