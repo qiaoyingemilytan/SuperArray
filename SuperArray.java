@@ -100,4 +100,14 @@ public class SuperArray{
     return removed;
   }
 
+  public int indexOf(String s){
+    int index = -1;
+    for(int i = 0; i < size(); i++){
+      if(data[i] != null && data[i].equals(s)){
+        return i;
+      }
+    }
+    return index;
+  }
+
 }
