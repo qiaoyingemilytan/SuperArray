@@ -8,6 +8,14 @@ public class Tester2{
     test.add("two");
     test.add("three");
     test.add("four");
+    test.add("test");
+    SuperArray other = new SuperArray();
+    other.add("one");
+    other.add("two");
+    other.add("three");
+    other.add("four");
+    other.add("test");
+    System.out.println(test.equals(other));
     System.out.println(test.isEmpty());
     System.out.println(test.toString());
     System.out.println(test.size());
@@ -22,5 +30,6 @@ public class Tester2{
     System.out.println(test.indexOf("test"));
     System.out.println(test.indexOf("no"));
     System.out.println(test.toArray());
+    System.out.println(test.lastIndexOf("test"));
   }
 }
