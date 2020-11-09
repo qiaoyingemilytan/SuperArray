@@ -133,4 +133,14 @@ public class SuperArray{
     return -1;
   }
 
+  public boolean equals(SuperArray other){
+    boolean same = true;
+    for(int i = 0; i < size(); i++){
+      if(data[i] != other.get(i)){
+        same = false;
+      }
+    }
+    return same;
+  }
+
 }
