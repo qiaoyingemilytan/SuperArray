@@ -93,7 +93,7 @@ public class SuperArray{
 
   public void add(int index, String element){
     if(index < 0 || index >= size()){
-      throw new IndexOutOfBoundsException("Index" + index + "out of bounds of 0 - " + size());
+      throw new IndexOutOfBoundsException("Index " + index + " out of bounds of 0 - " + size());
     }
     resize();
     String temp = data[index];
