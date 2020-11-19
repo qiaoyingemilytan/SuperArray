@@ -60,9 +60,7 @@ public class SuperArray{
   }
 
   public void clear(){
-    for(int i = 0; i < size(); i++){
-      data[i] = null;
-    }
+    data = new String[0];
   }
 
   public String toString(){
@@ -92,7 +90,7 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    if(index < 0 || index >= size()){
+    if(index < 0 || index > size()){
       throw new IndexOutOfBoundsException("Index " + index + " out of bounds of 0 - " + size());
     }
     resize();
